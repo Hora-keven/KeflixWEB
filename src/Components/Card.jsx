@@ -6,19 +6,18 @@ const Card = ()=>{
     
    
 
-     const getPostsBatman = async(url)=>{
-        const response = await fetch(url)
-        const data = await response.json()
-     
-        return setDescriptionMovie(data)
-        
-     
-        
-    }
 
     useEffect(()=>{
-        const url = `https://www.omdbapi.com/?s=Batman&page=5&apikey=62b1e07d`
-        getPostsBatman(url)
+        
+        const url = 'http://www.omdbapi.com/?s=Batman&page=2&apikey=62b1e07d'
+     
+        fetch(url).then(function (response) {
+            return response.json()
+        }).then(function (data) {
+            return setDolar(data.Search[0])
+        
+        })
+
       
     }, [])
  
