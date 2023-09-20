@@ -1,34 +1,42 @@
 import { useState, useEffect } from 'react'
+import imagePath, { apiKey } from '../config/key'
 
 const Card = ()=>{
     const[descriptionMovie, setDescriptionMovie] = useState([])
-//    const [url, setUrl]=useState()
-    
-   
-
-
+    const [serie, setSerie]=useState("Batman")
+    const [idImg, setIdImg]=useState("")
     useEffect(()=>{
         
-        const url = 'http://www.omdbapi.com/?s=Batman&page=2&apikey=62b1e07d'
-     
+        const url = `http://www.omdbapi.com/?s=${serie}&page=2&${apiKey}`
         fetch(url).then(function (response) {
             return response.json()
         }).then(function (data) {
-            return setDolar(data.Search[0])
+            console.log(data)
+            const dados = data['Search']
+            console.log(dados[0].imdbID)
+            
+            return setDescriptionMovie(dados)
         
         })
+     
 
       
     }, [])
  
     return(
-        <div className="cards">
-            <div className="card">
-                <img src="" alt="movie"/>
-                <h1 className="titleMovie"></h1>
-                <h3 className="descriptionMovie"></h3>
+
+        <div className="contentCards">  
+            <div className="cards">{
+            descriptionMovie.map(batman=>{
+                return (
+                <div className="card">
+                    <a href=""><div className="image"><img src={imagePath(batman.imdbID)} alt="batman" /></div></a>
+                </div>)
+                })
+            }
             </div>
-        </div>
+        </div>   
+                       
     )
 }
 export default Card;
