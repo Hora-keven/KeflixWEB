@@ -35,7 +35,7 @@ h1{
 }
 .card{
     height: 60vh;
-    width: 110%;
+    width: 100%;
    
     border-radius: 3vh;
     margin-top: 25px;
@@ -93,6 +93,7 @@ button{
 .detail{
     width: 100%;
     height: 50vh;
+    
 }
 #img{
     width: 20vw;
@@ -100,6 +101,31 @@ button{
 #home{
     position: relative;
     left: 0;
-    right: 900px;
+    bottom: 0;
+    color: #000;
+    border-radius: 3ch;
+    margin-top: 8%;
 
+}
+.justCard{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4%;
+
+}
+#title{
+    color: white;
+    font-size: 5ch;
+}
+span{
+    color: #ffffff;
+    width: 50%;
+    margin-top: 1%;
+}
+.informationMovie{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
