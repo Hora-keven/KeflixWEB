@@ -5,7 +5,7 @@ import './Components/global.css'
 import Content from './Components/Content'
 
 function App() {
-
+  
   return (
     <>
       <Header/>
