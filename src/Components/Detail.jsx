@@ -13,8 +13,7 @@ export default function Detail() {
             return response.json()
         }).then(function (data) {
             const dados = data
-            console.log(dados.imdbID)
-            console.log(dados)
+           
             const { Title, Poster, Plot, Released } = dados
             const movie = {
                 id,

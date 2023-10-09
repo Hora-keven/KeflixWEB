@@ -8,15 +8,7 @@ function Header() {
             <h1>Keflix</h1>
             <Input/>
             <Button/>
-      
-  
-        <div className="windowInputR">
-            <input type="radio"  />
-            <input type="radio" />
-        </div>
-    
-
-            
+     
         </div>
 
 
