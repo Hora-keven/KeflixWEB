@@ -36,8 +36,6 @@ h1{
 .card{
     height: 60vh;
     width: 100%;
-   
-    border-radius: 3vh;
     margin-top: 25px;
     justify-content: center;
     align-items: center;
@@ -53,7 +51,7 @@ h1{
 img{
     width: 100%;
     height: 100%;
-    border-radius: 3ch;
+  
 }
 
 .contentCards{
@@ -70,7 +68,7 @@ img{
 input{
     width: 50%;
     height: 50%;
-    border-radius: 4ch 0ch 0ch 4ch;
+    outline: 0;
     border-color: #ffffff;
     outline-width: 0;
 }
@@ -79,11 +77,10 @@ input{
     height: 50%;
 }
 button{
-    background-color: #838383;
+    background-color: #f01212;
     color: #ffffff;
     width: 6vw;
-    height: 3.5vh;
-    border-radius: 0px 4ch 4ch 0px;
+    height: 3.3vh;
     position: relative;
     left:518px;
     bottom: 49.7px;
